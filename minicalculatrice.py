@@ -71,9 +71,20 @@ if __name__ == "__main__":
 
 
 # créer une fonction permet de calculer la moyenne des nombres stockés dans la liste nombres
+
 def calculer_moyenne(nombres):
     total = 0
     for nombre in nombres:
         total += nombre
     moyenne = total / len(nombres)
     return moyenne
+
+
+# Demande à l'utilisateur d'entrer des nombres séparés par des virgules
+input_string = input("Entrez des nombres séparés par des virgules : ")
+
+# Conversion de chaque élément de input_string en entier et stockage dans la liste 'nombres'
+nombres = [int(nbr) for nbr in input_string.split(",")]
+
+# Appel de la fonction avec la liste convertie
+print("La moyenne est :", calculer_moyenne(nombres))
